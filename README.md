@@ -31,7 +31,7 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
   ```
   {
 	"auto_complete": true,
-	"auto_complete_commit_on_tab": true,
+	"auto_complete_commit_on_tab": false,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"highlight_line": true,
@@ -77,5 +77,11 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
   //"trim_trailing_white_space_on_save": true,
   //"ensure_newline_at_eof_on_save": true
 }
+  ```
 
+## Key Bindings
+  ```
+  [
+  { "keys": ["ctrl+space"], "command": "auto_complete" }
+  ]
   ```
