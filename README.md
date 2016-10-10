@@ -12,8 +12,8 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
   - git
   - gitGutter
   - closeOtherWindows
-  - allAutoCompelete
-  - breacketHighlighter
+  - all AutoCompelete
+  - bracketHighlighter
   - beautifyRuby
   - emmet
   - ctags
@@ -82,6 +82,8 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 ## Key Bindings
   ```
   [
-  { "keys": ["ctrl+space"], "command": "auto_complete" }
+  	{ "keys": ["ctrl+space"], "command": "auto_complete" },
+  	{ "keys": ["ctrl+shift+up"], "command":"select_lines", "args": {"forward": false} },
+	{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} }
   ]
   ```
