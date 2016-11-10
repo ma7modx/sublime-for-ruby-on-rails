@@ -87,3 +87,32 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 	{ "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} }
   ]
   ```
+## Plugins
+  to create a plugin ```Tools-> Developer-> Plugin```
+  - CloseOthersCommand
+  ```
+import sublime_plugin
+
+class CloseOthersCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        window = self.view.window()
+        group_index, view_index = window.get_view_index(self.view)
+        window.run_command("close_others_by_index", { "group": group_index, "index": view_index})
+	```
+  - CloseToRightCommand
+  ```
+import sublime_plugin
+
+class CloseToRightCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        window = self.view.window()
+        group_index, view_index = window.get_view_index(self.view)
+        window.run_command("close_to_right_by_index", { "group": group_index, "index": view_index})
+	```
+  - to add these plugins in the key bindings 
+  
+ ```
+ { "keys": ["ctrl+shift+w"], "command": "close_others" }
+ { "keys": ["ctrl+shift+e"], "command": "close_to_right" }
+ ```
+
